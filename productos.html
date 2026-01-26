@@ -15,11 +15,12 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="css/productos.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/productos.css">
 </head>
 <body id="inicio">
 
-<!--  NAVBAR  -->
+<!-- NAVBAR -->
 <header id="navbar">
     <h1>Nuestros Productos</h1>
     <hr>
@@ -34,83 +35,89 @@
 
 <main class="max-w-6xl mx-auto p-6">
 
-<!-- CATÁLOGO  -->
+<!-- BUSCADOR -->
+<section class="mb-4">
+    <input 
+        type="text" 
+        id="buscador" 
+        placeholder="Buscar productos..." 
+        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+    >
+</section>
+
+<!-- BOTONES DE CATEGORÍA -->
+<section class="mb-6 flex gap-4">
+    <button class="filtro bg-green-500 text-white px-4 py-2 rounded" data-categoria="todos">Todos</button>
+    <button class="filtro bg-green-500 text-white px-4 py-2 rounded" data-categoria="laptops">Laptops</button>
+    <button class="filtro bg-green-500 text-white px-4 py-2 rounded" data-categoria="smartphones">Smartphones</button>
+    <button class="filtro bg-green-500 text-white px-4 py-2 rounded" data-categoria="accesorios">Accesorios</button>
+</section>
+
+<!-- CATÁLOGO -->
 <section id="catalogo">
     <h2 class="text-2xl font-semibold mb-4">Catálogo de productos tecnológicos</h2>
     <hr>
     <p class="mb-6">
-        En NovaTech Solutions ofrecemos una amplia variedad de productos tecnológicos
-        diseñados para satisfacer las necesidades de estudiantes, profesionales,
-        emprendedores y empresas. Nuestro catálogo incluye dispositivos modernos,
-        confiables y con alto rendimiento, seleccionados cuidadosamente para garantizar
-        calidad, durabilidad y satisfacción del cliente.
+        En NovaTech Solutions ofrecemos una variedad de productos tecnológicos.
     </p>
 
-    <div class="productos-grid">
-        <article class="producto-card">
-            <img src="img/laptop.jpg" alt="Laptop moderna de alto rendimiento" width="180">
-            <h3 class="text-xl font-semibold mt-2 mb-2">Laptop Pro X</h3>
-            <p class="mb-2">
-                Computadora portátil de alto rendimiento ideal para tareas profesionales,
-                programación, diseño gráfico y uso académico avanzado. Cuenta con procesador
-                moderno, almacenamiento rápido y batería de larga duración.
-            </p>
+    <div class="productos-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Producto 1 -->
+        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="laptops">
+            <img src="img/laptop.jpg" alt="Laptop moderna de alto rendimiento" class="mx-auto mb-4" width="180">
+            <h3 class="text-xl font-semibold mb-2">Laptop Pro X</h3>
+            <p class="mb-2">Computadora portátil de alto rendimiento para trabajo y estudio.</p>
             <p class="font-bold">$850</p>
         </article>
 
-        <article class="producto-card">
-            <img src="img/phone.webp" alt="Teléfono inteligente de última generación" width="180">
-            <h3 class="text-xl font-semibold mt-2 mb-2">Smartphone Nova</h3>
-            <p class="mb-2">
-                Teléfono inteligente con cámara avanzada, gran capacidad de almacenamiento
-                y sistema operativo optimizado para ofrecer una experiencia fluida,
-                rápida y segura en el uso diario.
-            </p>
+        <!-- Producto 2 -->
+        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="smartphones">
+            <img src="img/phone.webp" alt="Teléfono inteligente" class="mx-auto mb-4" width="180">
+            <h3 class="text-xl font-semibold mb-2">Smartphone Nova</h3>
+            <p class="mb-2">Teléfono con cámara avanzada y rendimiento óptimo.</p>
             <p class="font-bold">$420</p>
         </article>
 
-        <article class="producto-card">
-            <img src="img/audifonos.webp" alt="Auriculares inalámbricos modernos" width="180">
-            <h3 class="text-xl font-semibold mt-2 mb-2">Auriculares AirBeat</h3>
-            <p class="mb-2">
-                Auriculares inalámbricos con sonido envolvente, cancelación de ruido pasiva
-                y batería de larga duración, ideales para trabajo remoto, estudio
-                y entretenimiento multimedia.
-            </p>
+        <!-- Producto 3 -->
+        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="accesorios">
+            <img src="img/audifonos.webp" alt="Auriculares inalámbricos" class="mx-auto mb-4" width="180">
+            <h3 class="text-xl font-semibold mb-2">Auriculares AirBeat</h3>
+            <p class="mb-2">Auriculares inalámbricos con sonido envolvente y cancelación de ruido.</p>
             <p class="font-bold">$95</p>
         </article>
-    </div>
-</section>
 
-<!-- SERVICIOS -->
-<section id="servicios">
-    <h2 class="text-2xl font-semibold mb-4">Servicios complementarios</h2>
-    <hr>
-    <p class="mb-4">
-        Además de la venta de productos tecnológicos, NovaTech Solutions ofrece
-        servicios complementarios que permiten a nuestros clientes aprovechar
-        al máximo sus herramientas digitales.
-    </p>
-    <p class="mb-4">
-        Entre estos servicios se incluyen instalación y configuración de equipos,
-        mantenimiento preventivo y correctivo, asesoría tecnológica personalizada
-        y desarrollo de soluciones digitales a medida.
-    </p>
-    <p>
-        Nuestro equipo está comprometido con brindar soporte profesional,
-        atención eficiente y soluciones confiables que contribuyan
-        al éxito de nuestros clientes.
-    </p>
+        <!-- Producto 4 -->
+        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="laptops">
+            <img src="img/monitor.jpg" alt="Monitor LED" class="mx-auto mb-4" width="180">
+            <h3 class="text-xl font-semibold mb-2">Monitor LED Ultra</h3>
+            <p class="mb-2">Pantalla de alta definición ideal para gaming y trabajo profesional.</p>
+            <p class="font-bold">$300</p>
+        </article>
+
+        <!-- Producto 5 -->
+        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="accesorios">
+            <img src="img/teclado.jpg" alt="Teclado mecánico" class="mx-auto mb-4" width="180">
+            <h3 class="text-xl font-semibold mb-2">Teclado Mecánico X1</h3>
+            <p class="mb-2">Teclado retroiluminado con respuesta rápida para escritura y juegos.</p>
+            <p class="font-bold">$120</p>
+        </article>
+
+    </div>
 </section>
 
 </main>
 
-<!--  FOOTER  -->
-<footer id="footer">
+<!-- FOOTER -->
+<footer id="footer" class="mt-12">
     <hr>
     <p>NovaTech Solutions © 2026 - Todos los derechos reservados</p>
     <a href="#inicio">Volver al inicio</a>
 </footer>
 
+<!-- SCRIPT -->
+<script src="JS/script.js"></script>
+
 </body>
 </html>
+
