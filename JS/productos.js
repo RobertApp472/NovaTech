@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let productos = [];
 
     // Cargar productos desde JSON
-    fetch("public/data/productos.json")
+    fetch("Public/data/productos.json")
         .then(respuesta => respuesta.json())
         .then(data => {
             productos = data;
