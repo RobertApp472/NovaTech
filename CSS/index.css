@@ -92,3 +92,13 @@ body {
     color: var(--color-blanco);
     text-decoration: underline;
 }
+nav a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: yellow;
+}
+

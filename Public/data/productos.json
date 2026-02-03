@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop Pro X",
+    "descripcion": "Computadora portátil de alto rendimiento para trabajo y estudio.",
+    "precio": 850,
+    "categoria": "laptops",
+    "imagen": "img/laptop.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Smartphone Nova",
+    "descripcion": "Teléfono con cámara avanzada y rendimiento óptimo.",
+    "precio": 420,
+    "categoria": "smartphones",
+    "imagen": "img/phone.webp"
+  },
+  {
+    "id": 3,
+    "nombre": "Auriculares AirBeat",
+    "descripcion": "Auriculares inalámbricos con sonido envolvente y cancelación de ruido.",
+    "precio": 95,
+    "categoria": "accesorios",
+    "imagen": "img/audifonos.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Monitor LED Ultra",
+    "descripcion": "Pantalla de alta definición ideal para gaming y trabajo profesional.",
+    "precio": 300,
+    "categoria": "laptops",
+    "imagen": "img/monitor.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Teclado Mecánico X1",
+    "descripcion": "Teclado retroiluminado con respuesta rápida para escritura y juegos.",
+    "precio": 120,
+    "categoria": "accesorios",
+    "imagen": "img/teclado.jpg"
+  }
+]

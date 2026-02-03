@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Productos | NovaTech Solutions</title>
 
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.png" type="image/png">
 
@@ -20,7 +23,6 @@
 </head>
 <body id="inicio">
 
-<!-- NAVBAR -->
 <header id="navbar">
     <h1>Nuestros Productos</h1>
     <hr>
@@ -28,7 +30,8 @@
         <a href="index.html">Inicio</a> |
         <a href="nosotros.html">Nosotros</a> |
         <a href="productos.html">Productos</a> |
-        <a href="#footer">Ir al final</a>
+        <a href="#footer">Carrito</a> |
+        <a href="login.html">Login</a>
     </nav>
     <hr>
 </header>
@@ -40,12 +43,13 @@
     <input 
         type="text" 
         id="buscador" 
-        placeholder="Buscar productos..." 
+        placeholder="Buscar productos..."
+        aria-label="Buscar productos"
         class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
     >
 </section>
 
-<!-- BOTONES DE CATEGORÍA -->
+<!-- FILTROS -->
 <section class="mb-6 flex gap-4">
     <button class="filtro bg-green-500 text-white px-4 py-2 rounded" data-categoria="todos">Todos</button>
     <button class="filtro bg-green-500 text-white px-4 py-2 rounded" data-categoria="laptops">Laptops</button>
@@ -61,63 +65,35 @@
         En NovaTech Solutions ofrecemos una variedad de productos tecnológicos.
     </p>
 
-    <div class="productos-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Producto 1 -->
-        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="laptops">
-            <img src="img/laptop.jpg" alt="Laptop moderna de alto rendimiento" class="mx-auto mb-4" width="180">
-            <h3 class="text-xl font-semibold mb-2">Laptop Pro X</h3>
-            <p class="mb-2">Computadora portátil de alto rendimiento para trabajo y estudio.</p>
-            <p class="font-bold">$850</p>
-        </article>
-
-        <!-- Producto 2 -->
-        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="smartphones">
-            <img src="img/phone.webp" alt="Teléfono inteligente" class="mx-auto mb-4" width="180">
-            <h3 class="text-xl font-semibold mb-2">Smartphone Nova</h3>
-            <p class="mb-2">Teléfono con cámara avanzada y rendimiento óptimo.</p>
-            <p class="font-bold">$420</p>
-        </article>
-
-        <!-- Producto 3 -->
-        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="accesorios">
-            <img src="img/audifonos.webp" alt="Auriculares inalámbricos" class="mx-auto mb-4" width="180">
-            <h3 class="text-xl font-semibold mb-2">Auriculares AirBeat</h3>
-            <p class="mb-2">Auriculares inalámbricos con sonido envolvente y cancelación de ruido.</p>
-            <p class="font-bold">$95</p>
-        </article>
-
-        <!-- Producto 4 -->
-        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="laptops">
-            <img src="img/monitor.jpg" alt="Monitor LED" class="mx-auto mb-4" width="180">
-            <h3 class="text-xl font-semibold mb-2">Monitor LED Ultra</h3>
-            <p class="mb-2">Pantalla de alta definición ideal para gaming y trabajo profesional.</p>
-            <p class="font-bold">$300</p>
-        </article>
-
-        <!-- Producto 5 -->
-        <article class="producto-card producto p-4 bg-white rounded-lg shadow-md text-center" data-categoria="accesorios">
-            <img src="img/teclado.jpg" alt="Teclado mecánico" class="mx-auto mb-4" width="180">
-            <h3 class="text-xl font-semibold mb-2">Teclado Mecánico X1</h3>
-            <p class="mb-2">Teclado retroiluminado con respuesta rápida para escritura y juegos.</p>
-            <p class="font-bold">$120</p>
-        </article>
-
+    <!-- PRODUCTOS DESDE JSON -->
+    <div 
+        id="productos-container"
+        class="productos-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     </div>
+</section>
+
+<!-- CARRITO -->
+<section class="mt-12 bg-gray-100 p-6 rounded-lg">
+    <h2 class="text-2xl font-semibold mb-4">🛒 Carrito de compras</h2>
+
+    <ul id="lista-carrito" class="mb-4"></ul>
+
+    <p class="font-bold">
+        Total: $<span id="total">0</span>
+    </p>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer id="footer" class="mt-12">
     <hr>
     <p>NovaTech Solutions © 2026 - Todos los derechos reservados</p>
     <a href="#inicio">Volver al inicio</a>
 </footer>
 
-<!-- SCRIPT -->
-<script src="JS/script.js"></script>
+<!-- JS -->
+<script src="JS/productos.js"></script>
+<script src="JS/carrito.js"></script>
 
 </body>
 </html>
-
